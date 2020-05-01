@@ -19,7 +19,7 @@ class EditProfileForm extends React.Component {
     return (
       <div>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Field>
+          {/* <Form.Field>
             <label>Change Password</label>
             <input
               placeholder="Enter password"
@@ -28,7 +28,7 @@ class EditProfileForm extends React.Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
-           </Form.Field>
+           </Form.Field> */}
           <Form.Field>
             <label>Add Bio</label>
             <textarea

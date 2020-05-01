@@ -40,12 +40,13 @@ class Profile extends React.Component {
       <div id="profileholder">
         <Menu path={this.props.match.path.slice(1)} />
         {currentUser && <div><div className="profile">
-          <ProfileCard header={currentUser[0].username} description={this.state.bio}/>
-          <div className="buttonHolder">
-            <Button>Change Password</Button>
-          </div>
+          <ProfileCard header={currentUser[0].username} description={this.state.bio||'No bio available'}/>
+          
           <div className="buttonHolder">
             <Button onClick={this.handleEdit}>Edit Profile</Button>
+          </div>
+          <div className="buttonHolder">
+            <Button>Get Messages</Button>
           </div>
           <div className="buttonHolder">
             <Button>Delete Profile</Button>
