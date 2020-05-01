@@ -1,0 +1,14 @@
+.profile{
+    width:30%;
+   margin:5% 10%;
+   float:left;
+}
+.buttonHolder{
+    margin:2% 0.2%;
+}
+.ui.button{
+    width:290px;
+}
+.hide{
+    visibility: hidden;
+}
