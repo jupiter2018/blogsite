@@ -2,6 +2,7 @@
     width:30%;
    margin:5% 10%;
    float:left;
+   display: block;
 }
 .buttonHolder{
     margin:2% 0.2%;
@@ -10,5 +11,14 @@
     width:290px;
 }
 .hide{
-    visibility: hidden;
+    width:30%;
+   margin:5% 10%;
+   float:left;
+    display:none
+}
+.display{
+    width:30%;
+    margin:5% 10%;
+    float:left;
+    visibility: visible;
 }

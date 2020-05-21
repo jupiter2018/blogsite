@@ -8,7 +8,9 @@ class MenuBar extends Component {
     state = { activeItem: this.props.path};
     
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  handleItemClick = (e, { name }) => {
+    this.setState({ activeItem: name });
+  }
 
   render() {
     const { activeItem } = this.state;
@@ -32,10 +34,13 @@ class MenuBar extends Component {
             onClick={this.handleItemClick}
           />
           <Menu.Menu position="right">
-            <Link to='/'><Menu.Item
-              name="logout" active={activeItem === "logout"}
-              onClick={this.props.logout}
-            /></Link>
+            <Link to="/" onClick={this.props.logout}>
+              <Menu.Item
+                name="logout"
+                active={activeItem === "logout"}
+                
+              />
+            </Link>
           </Menu.Menu>
         </Menu>
       </div>

@@ -5,7 +5,13 @@ import {
   UPDATE_USER,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_FAILURE,
-  GET_OWN_DATA_SUCCESS
+  GET_OWN_DATA_SUCCESS,
+  UPDATE_USER_PASSWORD,
+  UPDATE_USER_PASSWORD_SUCCESS,
+  UPDATE_USER_PASSWORD_FAILURE,
+  DELETE_USER,
+  DELETE_USER_SUCCESS,
+  DELETE_USER_FAILURE,
 } from "../actions";
 
 const initialState = {
@@ -15,7 +21,11 @@ const initialState = {
   updateUserLoading:false,
   updateUserSuccess: null,
   updateUserError: null,
-  getOwnDataSuccess:null
+  getOwnDataSuccess: null,
+  updateUserPasswordLoading:null,
+  updateUserPasswordSuccess: null,
+  updateUserPasswordFailure: null,
+  
 };
 
 export default (state = initialState, action) => {
@@ -49,10 +59,28 @@ export default (state = initialState, action) => {
       return {
         ...state, updateUserError:action.payload
       }
+    case UPDATE_USER_PASSWORD:
+      return {
+        ...state, updateUserPasswordLoading:true
+      }
+    case UPDATE_USER_PASSWORD_SUCCESS:
+      return {
+        ...state , updateUserPasswordSuccess:action.payload
+      }
+    case UPDATE_USER_PASSWORD_FAILURE:
+      return {
+        ...state, updateUserPasswordFailure:action.payload
+      }
+    
     case GET_OWN_DATA_SUCCESS:
       return {
         ...state, getOwnDataSuccess:action.payload
       }
+    case DELETE_USER_SUCCESS:
+      return {
+        ...initialState
+      }
+    
     default:
       return state;
   }
